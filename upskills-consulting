@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UpSkills Consulting</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <!-- Frozen Navigation Menu -->
+    <nav class="menu">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#work-with-us">Work with Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h1>Empowering individuals and organizations to thrive</h1>
+        <button id="for-individuals">For Individuals</button>
+        <button id="for-businesses">For Businesses</button>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="program blue-section" id="individuals-section">
+            <h2>Programs for Individuals</h2>
+        </div>
+        <div class="program orange-section" id="businesses-section">
+            <h2>Programs for Businesses</h2>
+        </div>
+    </section>
+
+    <!-- Interested in Learning More -->
+    <section id="interested">
+        <h2>Interested in learning more?</h2>
+        <p>Email: <a href="mailto:contact@upskillsconsulting.com">contact@upskillsconsulting.com</a></p>
+        <div class="social-links">
+            <a href="#" id="instagram-link" target="_blank">Instagram</a>
+            <a href="#" id="x-link" target="_blank">X</a>
+            <a href="#" id="whatsapp-link" target="_blank">WhatsApp</a>
+        </div>
+
+        <!-- Contact Form -->
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Full Name / Company Name" maxlength="50" required>
+            <input type="email" id="email" placeholder="Email Address" required>
+            <input type="text" id="telephone" placeholder="Telephone" pattern="[0-9\-+\s]{4,20}" required>
+            <textarea id="comment" placeholder="Comment" maxlength="200" required></textarea>
+            <button type="submit" id="submit-btn" disabled>Submit</button>
+            <p id="error-msg"></p>
+        </form>
+    </section>
+
+    <!-- Privacy Policy and Cookies Preferences -->
+    <footer>
+        <a href="#" id="privacy-policy">Privacy Policy</a>
+        <a href="#" id="cookies-preferences">Cookies Preferences</a>
+    </footer>
+
+    <!-- Popups for Privacy and Cookies -->
+    <div id="privacy-popup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <p>Privacy Policy Content</p>
+        </div>
+    </div>
+
+    <div id="cookies-popup" class="popup">
+        <div class="popup-content">
+            <p>Manage your cookie preferences</p>
+            <button>Accept</button>
+            <button>Decline</button>
+        </div>
+    </div>
+
+</body>
+</html>
