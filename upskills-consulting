@@ -1,3 +1,17 @@
+project/
+│-- website/
+│   │-- index.html
+│   │-- styles.css
+│   │-- script.js
+│   │-- images/
+│   └-- email_handler.php
+│
+└-- cms/
+    │-- index.php
+    │-- config.php
+    │-- manage_content.php
+    │-- cms_styles.css
+    └-- cms_script.js
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -82,3 +96,60 @@
 
 </body>
 </html>
+/* Basic Reset */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Frozen Menu Bar */
+.menu {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 1000;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Program Sections */
+.blue-section {
+    background-color: #007BFF;
+    padding: 20px;
+}
+
+.orange-section {
+    background-color: #FFA500;
+    padding: 20px;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+button[disabled] {
+    background-color: grey;
+    cursor: not-allowed;
+}
+
+/* Popup Styles */
+.popup {
+    display: none;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+}
+document.addEventListener('DOMContentLoaded', () => {
+    const submitBtn = document.getElementById('submit-btn');
+    const formInputs = document.querySelectorAll('#contact-form input, #contact-form textarea');
+
+    formInputs.forEach(input => {
+        input.addEventListener('input', () => {
+            submitBtn.disabled = ![...formInputs].every(field => field.value.trim() !== '');
+        });
+    });
+});
+
